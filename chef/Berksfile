@@ -1,0 +1,6 @@
+site :opscode
+
+cookbook "sqlite"
+cookbook "ruby_build"
+cookbook "rbenv"
+cookbook "mysql"

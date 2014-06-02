@@ -1,0 +1,58 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box     = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+
+
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+
+  config.vm.synced_folder "../", "/taller"
+
+  config.vm.provider "virtualbox" do |vb|
+    # Use VBoxManage to customize the VM. For example to change memory:
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--name", "TALLER"]
+  end
+
+  config.vm.provision :shell, :inline => 'apt-get update'
+  config.vm.provision :shell, :inline => 'apt-get install -y build-essential ruby1.9.1-dev --no-upgrade'
+  config.vm.provision :shell, :inline => "gem install chef --version 11.4.2 --no-rdoc --no-ri --conservative"
+  config.vm.provision :shell, :inline => "gem install rake --version 10.1.1 --no-rdoc --no-ri --conservative"
+
+  config.vm.provision "chef_solo" do |chef|
+    chef.cookbooks_path = ["../chef/cookbooks","../chef/site-cookbooks"]
+
+    chef.add_recipe "taller::vagrant"
+    chef.add_recipe "sqlite::default"
+
+    chef.json = {
+      :mysql => {
+          :server_root_password => "123qwe",
+          :server_repl_password => "123qwe",
+          :server_debian_password => "123qwe"
+      },
+      rbenv: {
+        user_installs: [
+          {
+            user: "vagrant",
+            rubies: ["2.0.0-p247"],
+            global: "2.0.0-p247",
+            gems: {
+              :'2.0.0-p247' => [
+                {name: "bundler"}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  end
+end
