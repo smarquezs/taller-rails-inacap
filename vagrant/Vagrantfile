@@ -17,7 +17,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "../", "/taller"
 
   config.vm.provider "virtualbox" do |vb|
-    # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "1024"]
     vb.customize ["modifyvm", :id, "--name", "TALLER"]
   end
@@ -29,9 +28,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = ["../chef/cookbooks","../chef/site-cookbooks"]
-
-    chef.add_recipe "taller::vagrant"
-    chef.add_recipe "sqlite::default"
 
     chef.json = {
       :mysql => {
@@ -54,5 +50,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ]
       }
     }
+
+    chef.run_list = [
+      "recipe[taller::vagrant]",
+      "recipe[taller::app]",
+    ]
   end
 end

@@ -1,4 +1,4 @@
-# nimrod cookbook
+# taller cookbook
 
 # Requirements
 
