@@ -35,6 +35,8 @@ gem 'sdoc',          group: :doc, require: false
 gem 'execjs'
 gem 'therubyracer'
 
+gem 'thin'
+
 group :development do
   gem 'pry-rails'
   #gem 'spring'
