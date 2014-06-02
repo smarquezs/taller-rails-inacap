@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box     = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
+  config.vm.hostname = 'taller-rails-inacap'
 
 
   # accessing "localhost:8080" will access port 80 on the guest machine.
