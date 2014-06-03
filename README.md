@@ -1,4 +1,4 @@
-== TALLER RAILS
+## TALLER RAILS
 
 ## Prerrequisitos
 * Vagrant
