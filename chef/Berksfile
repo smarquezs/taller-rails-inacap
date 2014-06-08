@@ -2,5 +2,6 @@ site :opscode
 
 cookbook "sqlite"
 cookbook "ruby_build"
-cookbook "rbenv"
+cookbook 'rbenv', git: 'git@github.com:fnichol/chef-rbenv.git'
 cookbook "mysql"
+cookbook "nginx"
