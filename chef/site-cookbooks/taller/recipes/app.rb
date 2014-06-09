@@ -1,6 +1,7 @@
 include_recipe 'ruby_build'
 include_recipe 'rbenv::user'
 include_recipe 'mysql::client'
+include_recipe 'imagemagick'
 
 include_recipe 'nginx::source'
 include_recipe 'nginx::http_stub_status_module'

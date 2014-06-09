@@ -7,7 +7,9 @@
       "locked_version": "0.8.0"
     },
     "rbenv": {
-      "locked_version": "1.7.1"
+      "locked_version": "0.7.3",
+      "git": "git@github.com:fnichol/chef-rbenv.git",
+      "ref": "0a3018634bafe58ad21c6ee271af015220e444b9"
     },
     "mysql": {
       "locked_version": "4.1.2"
@@ -15,20 +17,38 @@
     "nginx": {
       "locked_version": "2.4.4"
     },
-    "git": {
-      "locked_version": "4.0.2"
+    "imagemagick": {
+      "locked_version": "0.2.3"
     },
-    "dmg": {
-      "locked_version": "2.2.0"
+    "java": {
+      "locked_version": "1.22.0"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
     },
     "build-essential": {
       "locked_version": "1.4.4"
+    },
+    "homebrew": {
+      "locked_version": "1.5.4"
     },
     "windows": {
       "locked_version": "1.30.0"
     },
     "chef_handler": {
       "locked_version": "1.1.5"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
+    },
+    "bluepill": {
+      "locked_version": "2.3.1"
+    },
+    "rsyslog": {
+      "locked_version": "1.12.2"
+    },
+    "ohai": {
+      "locked_version": "1.1.12"
     },
     "runit": {
       "locked_version": "1.5.10"
@@ -38,24 +58,6 @@
     },
     "yum-epel": {
       "locked_version": "0.3.4"
-    },
-    "apt": {
-      "locked_version": "2.3.8"
-    },
-    "ohai": {
-      "locked_version": "1.1.12"
-    },
-    "openssl": {
-      "locked_version": "1.1.0"
-    },
-    "homebrew": {
-      "locked_version": "1.5.4"
-    },
-    "bluepill": {
-      "locked_version": "2.3.1"
-    },
-    "rsyslog": {
-      "locked_version": "1.12.2"
     }
   }
 }
