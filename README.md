@@ -23,14 +23,20 @@ Ir a la consola si es windows ideal C:
   vagrant ssh (para ingresar a la maquina con linux)
   cd /taller
   rbenv rehash
-  bundle install (esperar otro ratito)
+  bundle install --no-deployment; bundle install --deployment (esperar otro ratito)
 ```
 
 ## Cuando termine el bundle install
 
-```
-  bundle exec rails server
-```
-## En su navegador
+Agregue una entrada en su archivo hosts
 
-localhost:3000
+```console
+  33.33.33.51 taller.dev.inacap.cl
+```
+
+Ahora vaya a su navegador e ingrese
+taller.dev.inacap.cl o 33.33.33.51
+
+## Finalmente
+
+Estás listo para codear
