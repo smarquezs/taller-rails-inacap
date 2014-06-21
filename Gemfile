@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails', '4.1.1'
+
 gem 'sqlite3'
 
 
@@ -43,6 +45,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
 end
 
