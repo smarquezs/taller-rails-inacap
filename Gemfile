@@ -6,7 +6,7 @@ gem 'rails', '4.1.0.beta1'
 
 gem 'sqlite3'
 
-gem 'mysql2'
+#gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
@@ -42,6 +42,14 @@ group :development do
   #gem 'spring'
 end
 
+group :test, :development do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

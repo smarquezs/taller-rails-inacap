@@ -45,9 +45,10 @@
         "rubies": ["2.0.0-p247"],
         "global": "2.0.0-p247",
         "gems": {
-          "2.0.0-p247": [
+          "2.0.0": [
+            {"name": "rails", "version": "4.1.1"},
             {"name": "bundler"},
-            {"name": "passenger", "version": "4.0.37" }
+            {"name": "passenger", "version": "4.0.29"}
           ]
         }
       }
