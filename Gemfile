@@ -35,12 +35,12 @@ gem 'therubyracer'
 gem 'thin'
 
 group :development do
-  gem 'pry-rails'
   #gem 'spring'
 end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'pry-rails'
 end
 
 group :test do

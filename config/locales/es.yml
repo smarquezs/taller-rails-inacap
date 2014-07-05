@@ -1,0 +1,8 @@
+es:
+  hello: "Hola mundo"
+
+es-CL:
+  hello: "Bienvenido"
+
+es-MX:
+  hello: "Hola cuate"  
