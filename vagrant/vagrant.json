@@ -5,7 +5,6 @@
     "name": "taller",
     "dir": "/taller",
     "env": "development",
-    "kenneth_url": "http://kenneth.dev.archdaily.com",
     "nginx": {
       "vhosts_dir": "",
       "user": ""

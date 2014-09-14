@@ -1,0 +1,6 @@
+<h1>Editing event</h1>
+
+<%= render 'form', url: event_path(site: site, id: @event.id), method: :put %>
+
+<%= link_to 'Show', show_events_path(site: site, id: @event.id ) %> |
+<%= link_to 'Back', events_path(site: site) %>
