@@ -1,1 +1,7 @@
 esto es un cambio hecho en master
+
+otro cambio en master
+
+más cambios
+
+otro cambio
