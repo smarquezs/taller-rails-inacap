@@ -17,4 +17,4 @@
 vagrant/.vagrant
 
 vendor/bundle
-file1.txt
+#file1.txt
